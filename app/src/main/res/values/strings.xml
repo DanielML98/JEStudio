@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JE Studio</string>
+    <string name="profile_tab">Profile</string>
+    <string name="book_tab">Book</string>
+    <string name="payments_tab">Payments</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

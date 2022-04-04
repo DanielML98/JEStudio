@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="je_purple_200">#F5BCEA</color>
+    <color name="je_purple_300">#E294D9</color>
+    <color name="je_purple_400">#C670C4</color>
+    <color name="je_purple_500">#9C44A1</color>
+    <color name="je_purple_600">#7E318A</color>
+    <color name="je_purple_700">#612273</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
