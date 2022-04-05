@@ -7,6 +7,7 @@ import com.danielml.jestudio.databinding.ActivityMainBinding
 import com.danielml.jestudio.fragments.BookFragment
 import com.danielml.jestudio.fragments.PaymentsFragment
 import com.danielml.jestudio.fragments.ProfileFragment
+import com.danielml.jestudio.models.SpinningStudio
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,5 +36,13 @@ class MainActivity : AppCompatActivity() {
       transaction.replace(binding.fragmentContainer.id, fragment)
       transaction.commit()
     }
+  }
+
+  private fun createSpinningStudios(): ArrayList<SpinningStudio> {
+    val studios = ArrayList<SpinningStudio>()
+    studios.add(SpinningStudio("Moderna", 10))
+    studios.add(SpinningStudio("Universidad 54", 8))
+    studios.add(SpinningStudio("Quemada", 4))
+    return studios
   }
 }
