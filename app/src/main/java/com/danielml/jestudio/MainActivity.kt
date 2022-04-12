@@ -38,11 +38,4 @@ class MainActivity : AppCompatActivity() {
     }
   }
 
-  private fun createSpinningStudios(): ArrayList<SpinningStudio> {
-    val studios = ArrayList<SpinningStudio>()
-    studios.add(SpinningStudio("Moderna", 10))
-    studios.add(SpinningStudio("Universidad 54", 8))
-    studios.add(SpinningStudio("Quemada", 4))
-    return studios
-  }
 }
