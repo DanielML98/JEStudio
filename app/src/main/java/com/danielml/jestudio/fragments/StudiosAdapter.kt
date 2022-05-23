@@ -30,7 +30,7 @@ class StudiosAdapter(private val context: Context?, private val spinningStudios:
 
     fun bind(studio: SpinningStudio) {
       tvStudioName.text = studio.name
-      tvStudioCapacity.text = "${studio.capacity}" + R.string.bikes
+      tvStudioCapacity.text = "${context?.getString(R.string.capacity)}: ${studio.capacity} ${context?.getString(R.string.bikes)}"
     }
   }
 }
