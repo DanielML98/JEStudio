@@ -1,14 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".fragments.ProfileFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    <!---Header profile View-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="8dp">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:elevation="12dp"
+                android:id="@+id/view2"
+                app:cardCornerRadius="600dp"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/imageView1"
+                    android:src="@drawable/ic_launcher_background"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daniel Martinez"
+                android:textColor="@color/je_purple_700"
+                android:textSize="40sp"
+                android:fontFamily="@font/montserrat_variable_font_wght"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+    <!---Settings View-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/je_purple_500"
+    android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="50sp"
+        android:textColor="@color/material_dynamic_tertiary99"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/classes_setting"
+        android:textSize="40sp"
+        android:fontFamily="@font/montserrat_variable_font_wght"
+        android:textAllCaps="false"
+        android:textColor="@color/je_purple_700"
+        android:backgroundTint="@color/white"
+        android:gravity="left"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/payments_setting"
+        android:textSize="40sp"
+        android:fontFamily="@font/montserrat_variable_font_wght"
+        android:textAllCaps="false"
+        android:textColor="@color/je_purple_700"
+        android:backgroundTint="@color/white"
+        android:gravity="left"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/notifications_setting"
+        android:textSize="40sp"
+        android:fontFamily="@font/montserrat_variable_font_wght"
+        android:textAllCaps="false"
+        android:textColor="@color/je_purple_700"
+        android:backgroundTint="@color/white"
+        android:gravity="left"/>
+</LinearLayout>
 
-</FrameLayout>
+</LinearLayout>

@@ -8,4 +8,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="establishments">Studios</string>
+    <string name="classes_setting">My classes</string>
+    <string name="notifications_setting">Notifications</string>
+    <string name="payments_setting">Payments</string>
 </resources>
