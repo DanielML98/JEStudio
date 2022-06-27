@@ -29,7 +29,7 @@
                 android:id="@+id/tvStudioName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_variable_font_wght"
+                android:fontFamily="@font/montserrat_regular"
                 android:textColor="@color/je_purple_700"
                 android:textSize="34sp"
                 android:textStyle="normal"
@@ -39,7 +39,7 @@
                 android:id="@+id/tvCapacity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_variable_font_wght"
+                android:fontFamily="@font/montserrat_regular"
                 android:textColor="@color/je_purple_500"
                 android:textSize="16sp"
                 tools:text="Capacidad: n bicicletas" />

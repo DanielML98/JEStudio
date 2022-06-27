@@ -11,9 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/establishments"
-        android:textSize="50dp"
+        android:textSize="60sp"
         android:layout_margin="8dp"
-        android:fontFamily="@font/montserrat_variable_font_wght"
+        android:fontFamily="@font/montserrat_light"
         android:textStyle="bold"
         android:textColor="@color/je_purple_700"/>
 

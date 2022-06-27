@@ -37,8 +37,8 @@
                 android:layout_height="wrap_content"
                 android:text="Daniel Martinez"
                 android:textColor="@color/je_purple_700"
-                android:textSize="40sp"
-                android:fontFamily="@font/montserrat_variable_font_wght"/>
+                android:textSize="48sp"
+                android:fontFamily="@font/montserrat_regular"/>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </LinearLayout>
     <!---Settings View-->
@@ -51,8 +51,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Settings"
-        android:textSize="50sp"
-        android:textColor="@color/material_dynamic_tertiary99"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="48sp"
+        android:textColor="@color/white"
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="8dp"/>
     <Button
@@ -60,8 +61,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/classes_setting"
-        android:textSize="40sp"
-        android:fontFamily="@font/montserrat_variable_font_wght"
+        android:textSize="34sp"
+        android:fontFamily="@font/montserrat_regular"
         android:textAllCaps="false"
         android:textColor="@color/je_purple_700"
         android:backgroundTint="@color/white"
@@ -71,8 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/payments_setting"
-        android:textSize="40sp"
-        android:fontFamily="@font/montserrat_variable_font_wght"
+        android:textSize="34sp"
+        android:fontFamily="@font/montserrat_regular"
         android:textAllCaps="false"
         android:textColor="@color/je_purple_700"
         android:backgroundTint="@color/white"
@@ -82,8 +83,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/notifications_setting"
-        android:textSize="40sp"
-        android:fontFamily="@font/montserrat_variable_font_wght"
+        android:textSize="34sp"
+        android:fontFamily="@font/montserrat_regular"
         android:textAllCaps="false"
         android:textColor="@color/je_purple_700"
         android:backgroundTint="@color/white"
