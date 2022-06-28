@@ -2,6 +2,7 @@ package com.danielml.jestudio
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.danielml.jestudio.databinding.ActivityMainBinding
@@ -36,6 +37,10 @@ class MainActivity : AppCompatActivity() {
 
   private fun replaceFragment(fragment: Fragment) {
     if(fragment != null) {
+      val userName: String? = UserSessionManager.getCurrentUser()?.displayName
+      if (userName!= null) {
+        Log.i("FIREBASE NAME 🔥", userName)
+      }
       val transaction = supportFragmentManager.beginTransaction()
       transaction.replace(binding.fragmentContainer.id, fragment)
       transaction.commit()
