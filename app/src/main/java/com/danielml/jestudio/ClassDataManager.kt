@@ -13,7 +13,7 @@ import java.lang.reflect.Type
 class ClassDataManager {
   private var database: DatabaseReference = Firebase.database.reference
 
-  fun getSessions(): ArrayList<Session> {
+  fun getSessions(completion: () -> Unit): ArrayList<Session> {
     var weeklySessions = ArrayList<Session>()
     val studios = database.child("sessions").get().addOnSuccessListener {
       val sessions = it.value as Map<String, Session>
@@ -24,6 +24,7 @@ class ClassDataManager {
       for (session in data.values) {
         weeklySessions.add(session)
       }
+      completion()
     }.addOnFailureListener {
       Log.d("EXCEPTION➡️", it.toString())
     }

@@ -33,7 +33,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name"
+                android:hint="@string/name_label"
                 app:boxStrokeColor="@color/je_purple_700"
                 app:startIconDrawable="@drawable/ic_profile">
 
@@ -47,7 +47,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Last Name"
+                android:hint="@string/last_name_label"
                 app:boxStrokeColor="@color/je_purple_700"
                 app:startIconDrawable="@drawable/ic_profile">
 

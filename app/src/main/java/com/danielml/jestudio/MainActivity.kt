@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
   private val profileFragment = ProfileFragment()
   private val paymentsFragment = PaymentsFragment()
   private val bookFragment = BookFragment()
-  private val dataManager: ClassDataManager = ClassDataManager()
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -32,7 +31,6 @@ class MainActivity : AppCompatActivity() {
       }
       true
     }
-    dataManager.getSessions()
   }
 
   private fun replaceFragment(fragment: Fragment) {

@@ -22,4 +22,13 @@
     <string name="password_guidelines">Must be 8 characters long, contain a capital letter and a digit</string>
     <string name="already_have_account">Or if you already have an account</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="registration_failed_toast">Failed to register</string>
+    <string name="incomplete_form">Please fill in all the fields</string>
+    <string name="invalid_email_error">Invalid email</string>
+    <string name="invalid_email_toast">Your email format is invalid</string>
+    <string name="invalid_password_error">Invalid password</string>
+    <string name="invalid_password_toast">Please follow the password creating guidelines</string>
+    <string name="password_mismatch_toast">There\'s a mismatch between your passwords </string>
+    <string name="successful_profile_update_toast">User profile created successfully</string>
+    <string name="invalid_credentials">Invalid Credentials</string>
 </resources>

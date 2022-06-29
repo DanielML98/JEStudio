@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JEStudio">
         <activity
+            android:name=".WeeklySessionsActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity

@@ -19,6 +19,9 @@ class RegisterActivity : AppCompatActivity() {
     binding.signUpButton.setOnClickListener { 
       evaluateRegistrationForm()
     }
+    binding.signInButton.setOnClickListener {
+      onBackPressed()
+    }
     setContentView(binding.root)
   }
 
@@ -44,26 +47,26 @@ class RegisterActivity : AppCompatActivity() {
       }
       .addOnFailureListener {
         Log.d("FIREBASE EXCEPTION🔥", it.toString())
-        Toast.makeText(this, "Failed to register", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.registration_failed_toast), Toast.LENGTH_SHORT).show()
       }
   }
   
   private fun showEmptyFieldsWarning() {
-    Toast.makeText(this, "Please fill in all the fields", Toast.LENGTH_SHORT).show()
+    Toast.makeText(this, getString(R.string.incomplete_form), Toast.LENGTH_SHORT).show()
   }
   
   private fun showInvalidEmailWarning() {
-    binding.userTextField.error = "Invalid email"
-    Toast.makeText(this, "Your email format is invalid", Toast.LENGTH_SHORT).show()
+    binding.userTextField.error = getString(R.string.invalid_email_error)
+    Toast.makeText(this, getString(R.string.invalid_email_toast), Toast.LENGTH_SHORT).show()
   }
   
   private fun showInvalidPasswordWarning() {
-    binding.passwordTextField.error = "Invalid password"
-    Toast.makeText(this, "Please follow the password creation guidelines", Toast.LENGTH_SHORT).show()
+    binding.passwordTextField.error = getString(R.string.invalid_password_error)
+    Toast.makeText(this, getString(R.string.invalid_password_toast), Toast.LENGTH_SHORT).show()
   }
   
   private fun showPasswordMismatchWarning() {
-    Toast.makeText(this, "There's a mismatch between your passwords", Toast.LENGTH_SHORT).show()
+    Toast.makeText(this, getString(R.string.password_mismatch_toast), Toast.LENGTH_SHORT).show()
   }
 
   private fun setNewUserProfile() {
@@ -71,7 +74,7 @@ class RegisterActivity : AppCompatActivity() {
       displayName = "${binding.nameTextField.editText?.text.toString()} ${binding.lastNameTextField.editText?.text.toString()}"
     }
     UserSessionManager.getCurrentUser()?.updateProfile(request)?.addOnSuccessListener {
-      Toast.makeText(this, "User has now a name", Toast.LENGTH_SHORT).show()
+      Toast.makeText(this, getString(R.string.successful_profile_update_toast), Toast.LENGTH_SHORT).show()
     }
   }
 

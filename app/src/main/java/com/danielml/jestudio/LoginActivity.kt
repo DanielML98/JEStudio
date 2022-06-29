@@ -30,15 +30,15 @@ class LoginActivity : AppCompatActivity() {
         binding.userTextField.editText?.text.toString(),
         binding.passwordTextField.editText?.text.toString()
       )
-        .addOnCompleteListener {
+        .addOnSuccessListener {
           startActivity(Intent(this, MainActivity::class.java))
           finish()
       }
         .addOnFailureListener {
-          Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_LONG).show()
+          Toast.makeText(this, getString(R.string.invalid_credentials), Toast.LENGTH_LONG).show()
         }
     } else {
-      Toast.makeText(this, "Please fill in all the fields", Toast.LENGTH_SHORT).show()
+      Toast.makeText(this, getString(R.string.incomplete_form), Toast.LENGTH_SHORT).show()
     }
   }
 
