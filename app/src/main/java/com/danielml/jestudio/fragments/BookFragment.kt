@@ -13,6 +13,7 @@ import com.danielml.jestudio.R
 import com.danielml.jestudio.WeeklySessionsActivity
 import com.danielml.jestudio.databinding.FragmentProfileBinding
 import com.danielml.jestudio.models.SpinningStudio
+import com.danielml.jestudio.models.Studio
 
 class BookFragment : Fragment(), StudiosAdapter.OnStudioClick {
 
@@ -36,12 +37,21 @@ class BookFragment : Fragment(), StudiosAdapter.OnStudioClick {
     val studios = ArrayList<SpinningStudio>()
     studios.add(SpinningStudio("Moderna", 10))
     studios.add(SpinningStudio("Universidad 54", 8))
-    studios.add(SpinningStudio("Quemada", 4))
     return studios
+  }
+
+  private fun getSelectedStudio(studioName: String): Studio {
+    when (studioName) {
+      "Moderna" -> return Studio.MODERNA
+      "Universidad 54" -> return Studio.UNIVERSIDAD
+    }
+    return Studio.QUEMADA
   }
 
   override fun onStudioClick(studio: SpinningStudio) {
     Toast.makeText(context, "${studio.name}", Toast.LENGTH_SHORT).show()
-    startActivity(Intent(context, WeeklySessionsActivity::class.java))
+    val intent: Intent = Intent(context, WeeklySessionsActivity::class.java)
+    intent.putExtra("SELECTED_STUDIO", getSelectedStudio(studio.name))
+    startActivity(intent)
   }
 }
