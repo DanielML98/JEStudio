@@ -31,4 +31,6 @@
     <string name="password_mismatch_toast">There\'s a mismatch between your passwords </string>
     <string name="successful_profile_update_toast">User profile created successfully</string>
     <string name="invalid_credentials">Invalid Credentials</string>
+    <string name="bike_selection">You\'ve chosen bike number %1$s</string>
+    <string name="confirm_button_label">Confirm</string>
 </resources>

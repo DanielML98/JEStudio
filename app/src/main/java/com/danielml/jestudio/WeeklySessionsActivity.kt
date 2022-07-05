@@ -1,9 +1,12 @@
 package com.danielml.jestudio
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.danielml.jestudio.databinding.ActivityWeeklySessionsBinding
 import com.danielml.jestudio.fragments.BicycleGridFragmentDelegate
@@ -40,14 +43,15 @@ class WeeklySessionsActivity : AppCompatActivity(), WeeklySessionsAdapter.OnSess
     binding.weeklySessionsRV.layoutManager = LinearLayoutManager(this)
   }
 
+  @RequiresApi(Build.VERSION_CODES.O)
   override fun onSessionClick(session: Session) {
     val participants: Map<String, Int> = session.participants as Map<String, Int>
     val gridModel = BikeGridModel(participants)
     val intent = Intent(this, BikeSelectionActivity::class.java)
     intent.putExtra("DISTRIBUTION", gridModel)
     intent.putExtra("SESSION", session)
+    //Log.i("🆔", ClassDataManager().getSessionId(session))
     startActivity(intent)
-    Toast.makeText(this, "${session.coach}", Toast.LENGTH_SHORT).show()
   }
 
 }

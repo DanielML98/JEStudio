@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.core.content.res.ResourcesCompat.getColor
+import androidx.core.view.children
 import com.danielml.jestudio.BikeGridModel
 import com.danielml.jestudio.R
 import com.danielml.jestudio.databinding.FragmentBicycleGridBinding
@@ -20,7 +21,6 @@ class BicycleGridFragment : Fragment(), View.OnClickListener {
   lateinit var gridModel: BikeGridModel
   var selectedBicycle: ImageButton? = null
   var delegate: BicycleGridFragmentDelegate? = null
-  val numberOfBicycles: Int = 0
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -62,12 +62,15 @@ class BicycleGridFragment : Fragment(), View.OnClickListener {
   }
 
   override fun onClick(view: View?) {
+    selectedBicycle?.drawable?.setTint(resources.getColor(R.color.black))
     setGridAppearance()
     var imageButton = view as ImageButton
     selectedBicycle = imageButton
     imageButton.drawable.setTint(resources.getColor(R.color.je_purple_300))
+    delegate?.didSelectBike(selectedBicycle!!.tag.toString())
   }
 }
 
 interface BicycleGridFragmentDelegate {
+  fun didSelectBike(selectedBike: String)
 }

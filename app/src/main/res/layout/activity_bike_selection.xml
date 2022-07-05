@@ -114,5 +114,20 @@
             android:name="com.danielml.jestudio.fragments.BicycleGridFragment"
             android:id="@+id/bicycleGrid">
         </androidx.fragment.app.FragmentContainerView>
+
+        <TextView
+            android:id="@+id/selectedBikeTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/je_purple_500"
+            android:text="@string/bike_selection"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/confirmBikeSelectionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/confirm_button_label"/>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

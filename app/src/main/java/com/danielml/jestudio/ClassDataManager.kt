@@ -1,6 +1,9 @@
 package com.danielml.jestudio
 
+import android.os.Build
 import android.util.Log
+import android.widget.Toast
+import androidx.annotation.RequiresApi
 import com.danielml.jestudio.models.Session
 import com.danielml.jestudio.models.Studio
 
@@ -33,6 +36,23 @@ class ClassDataManager {
       Log.d("EXCEPTION➡️", it.toString())
     }
     return weeklySessions
+  }
+
+    fun bookPlaceIn(session: Session, updatedParticipants: Map<String, Int>, completion: () -> Unit) {
+      database.child(session.studio).child(getSessionId(session)).child("participants").setValue(updatedParticipants)
+        .addOnSuccessListener {
+          completion()
+        }
+        .addOnFailureListener {
+          Log.i("🆔", "Error❌: $it")
+        }
+    }
+
+   private fun getSessionId(session: Session): String {
+    val studio = session.studio.first()
+    val date = session.date.filter { it.toString() != "/" }
+    val hour = session.hour.removeSuffix(":00")
+    return "$studio$date$hour"
   }
 
 }

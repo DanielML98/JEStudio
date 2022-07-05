@@ -49,7 +49,6 @@ class BookFragment : Fragment(), StudiosAdapter.OnStudioClick {
   }
 
   override fun onStudioClick(studio: SpinningStudio) {
-    Toast.makeText(context, "${studio.name}", Toast.LENGTH_SHORT).show()
     val intent: Intent = Intent(context, WeeklySessionsActivity::class.java)
     intent.putExtra("SELECTED_STUDIO", getSelectedStudio(studio.name))
     startActivity(intent)
