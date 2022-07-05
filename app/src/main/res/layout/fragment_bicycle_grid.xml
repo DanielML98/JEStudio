@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,25 +18,34 @@
             android:layout_gravity="center"
             android:layout_marginRight="60dp">
             <ImageButton
+                android:id="@+id/bike5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_spinning_bike"
-                android:background="@color/white"/>
+                android:background="@color/white"
+                android:tag="5"
+                />
             <ImageButton
+                android:id="@+id/bike6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_spinning_bike"
-                android:background="@color/white" />
+                android:background="@color/white"
+                android:tag="6"/>
             <ImageButton
+                android:id="@+id/bike7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_spinning_bike"
-                android:background="@color/white" />
+                android:background="@color/white"
+                android:tag="7"/>
             <ImageButton
+                android:id="@+id/bike8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_spinning_bike"
-                android:background="@color/white" />
+                android:background="@color/white"
+                android:tag="8"/>
         </LinearLayout>
 
         <LinearLayout
@@ -48,25 +55,33 @@
             android:layout_gravity="center"
             android:layout_marginRight="70dp">
             <ImageButton
+                android:id="@+id/bike1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_spinning_bike"
-                android:background="@color/white" />
+                android:background="@color/white"
+                android:tag="1"/>
             <ImageButton
+                android:id="@+id/bike2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_spinning_bike"
-                android:background="@color/white" />
+                android:background="@color/white"
+                android:tag="2"/>
             <ImageButton
+                android:id="@+id/bike3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_spinning_bike"
-                android:background="@color/white" />
+                android:background="@color/white"
+                android:tag="3"/>
             <ImageButton
+                android:id="@+id/bike4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_spinning_bike"
-                android:background="@color/white" />
+                android:background="@color/white"
+                android:tag="4"/>
         </LinearLayout>
     </LinearLayout>
 

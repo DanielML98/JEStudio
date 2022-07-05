@@ -6,6 +6,7 @@
     <color name="je_purple_500">#9C44A1</color>
     <color name="je_purple_600">#7E318A</color>
     <color name="je_purple_700">#612273</color>
+    <color name="je_red_500">#DD2746</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

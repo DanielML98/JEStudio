@@ -1,10 +1,12 @@
 package com.danielml.jestudio
 
 import android.content.Context
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.danielml.jestudio.models.Session
 
@@ -14,6 +16,7 @@ class WeeklySessionsAdapter(private val context: Context, private val sessions: 
     return ViewHolder(view, onSessionListener)
   }
 
+  @RequiresApi(Build.VERSION_CODES.O)
   override fun onBindViewHolder(holder: ViewHolder, position: Int) {
     val currentSession: Session = sessions[position]
     holder.bind(currentSession)
@@ -23,13 +26,14 @@ class WeeklySessionsAdapter(private val context: Context, private val sessions: 
 
   inner class ViewHolder(itemView: View, private val onSessionClickListener: OnSessionClick): RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun bind(session: Session) {
       val hourTextView = itemView.findViewById<TextView>(R.id.tvHour)
       val availableSpotsTextView = itemView.findViewById<TextView>(R.id.tvAvailableSpots)
       val coachTextView: TextView = itemView.findViewById(R.id.tvCoachName)
 
       hourTextView.text = session.hour
-      availableSpotsTextView.text = session.date
+      availableSpotsTextView.text = session.date.getVerbalDate("dd/MM/yyy")
       coachTextView.text = session.coach
       itemView.setOnClickListener(this)
     }
