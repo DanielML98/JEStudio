@@ -55,7 +55,9 @@ class BikeSelectionActivity : AppCompatActivity(), BicycleGridFragmentDelegate {
     participants[currentUserId ?: "daniel"] = selectedBike
     classDataManager.bookPlaceIn(currentSession, participants.toMap()) {
       Toast.makeText(this, "Successfully Booked", Toast.LENGTH_SHORT).show()
-      navigateUpTo(Intent(this, MainActivity::class.java))
+      val intent = Intent(this, ConfirmationActivity::class.java)
+      intent.putExtra("BOOKED_SESSION", currentSession)
+      startActivity(intent)
     }
   }
 

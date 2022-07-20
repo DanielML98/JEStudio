@@ -33,4 +33,11 @@
     <string name="invalid_credentials">Invalid Credentials</string>
     <string name="bike_selection">You\'ve chosen bike number %1$s</string>
     <string name="confirm_button_label">Confirm</string>
+    <string name="add_to_calendar">Add to calendar</string>
+    <string name="your_class_on">Your class on</string>
+    <string name="at">at</string>
+    <string name="has_been_booked">has been booked</string>
+    <string name="ok_label">Ok</string>
+    <string name="calendar_event_title">JE Studio Spinning session</string>
+    <string name="calendar_event_description">Spinning session</string>
 </resources>
